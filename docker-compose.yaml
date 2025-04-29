@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8765:8765"
+    restart: unless-stopped
+    networks:
+      - chatnet
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - chatnet
+
+networks:
+  chatnet:
+    driver: bridge
