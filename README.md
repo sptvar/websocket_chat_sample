@@ -18,12 +18,12 @@ This is a **reference implementation** demonstrating:
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/websocket-chat-sample.git
+git clone https://github.com/sptvar/websocket_chat_sample.git
 ```
 
 2. Run with Docker:
 ```bash
-cd websocket-chat-sample
+cd websocket_chat_sample
 docker-compose up --build
 ```
 
