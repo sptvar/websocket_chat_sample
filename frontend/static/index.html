@@ -16,7 +16,8 @@
     <button onclick="sendMessage()">Отправить</button>
 
     <script>
-        const ws = new WebSocket("ws://localhost:8765");
+        const wsUrl = `ws://${window.location.hostname}:8765`;
+        const ws = new WebSocket(wsUrl);
         const messagesDiv = document.getElementById("messages");
         
         ws.onopen = () => {
