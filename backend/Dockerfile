@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY server.py .
 
 EXPOSE 8765
-CMD ["python", "server.py"]
+CMD ["python", "-u", "server.py"]
